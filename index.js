@@ -35,7 +35,9 @@ console.log(propThatDoesntExist)
                 <p><b>instructors: </b> </p>
                 <ul>
                     {instructors.map((v, i) => {
-                        return (<li key={i}>{v.name}</li>)
+                        //lets destructure v also!
+                        const { name } = v
+                        return (<li key={i}>{name}</li>)
                     })}
                 </ul>
                 <p><b>location: </b>{location}</p>
